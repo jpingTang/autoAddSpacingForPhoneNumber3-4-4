@@ -87,6 +87,19 @@ public class MainActivity extends AppCompatActivity {
                             emptyNumA++;
                         }
                     }
+                    /**
+                     * 如果将上面的for循环改成以下注释掉的for循环部分代码 就是输入银行卡自动添加空格了
+                     * 和支付宝上的添加银行的光标处理、删除与添加空格的策略一致
+                     */
+//                    for (int i = 0; i < content.length(); i++) {
+//                        if ((i + 1) % 4 == 0) {
+//                            sb.insert(i + index, " ");
+//                            index++;
+//                            emptyNumA++;
+//                        }
+//                    }
+
+
                     Log.i(TAG, "result content:" + sb.toString());
                     String result = sb.toString();
                     //遍历加空格后 如果发现最后一位是空格 就把这个空格去掉
@@ -100,7 +113,7 @@ public class MainActivity extends AppCompatActivity {
                     s.replace(0, s.length(), result);
 
                     //处理光标位置
-                    if (emptyNumA > emptyNumB){
+                    if (emptyNumA > emptyNumB) {
                         selectIndex = selectIndex + (emptyNumA - emptyNumB);
                     }
                     if (selectIndex > result.length()) {
