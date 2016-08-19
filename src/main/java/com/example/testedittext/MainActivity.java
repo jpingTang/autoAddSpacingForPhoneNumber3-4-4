@@ -116,8 +116,8 @@ public class MainActivity extends AppCompatActivity {
                     if (emptyNumA > emptyNumB) {
                         selectIndex = selectIndex + (emptyNumA - emptyNumB);
                     }
-                    if (selectIndex > result.length()) {
-                        selectIndex = result.length();
+                    if (selectIndex > s.length()) {
+                        selectIndex = s.length();
                     } else if (selectIndex < 0) {
                         selectIndex = 0;
                     }
